@@ -5,7 +5,7 @@ import textos
 
 
 continuar = True
-print("Bem-vindo")
+print("Bem-vindo Aluno")
 while continuar:
     for i,j in enumerate (textos.opcoes):
         print(textos.opcoes[i])
