@@ -1,3 +1,7 @@
+def carregarDados():
+    pass
+
+
 def calcularNotas(matrixNotas):
 
     notasParciais = []
@@ -19,3 +23,25 @@ def calcularNotas(matrixNotas):
             valor = valor/matrixNotas[len(matrixNotas) - 2][1]*100
             valor = round(valor,2)
             print("Falta ",valor)
+
+def criarDisciplina():
+    return True
+
+def criarSistemaAvaliacao():
+    return True
+
+def registrarClassificacao():
+    return True
+
+def verificarEstado():
+    return True
+
+def dataAvaliacao():
+    return True
+
+def classificacaoMinima():
+    return True
+
+def graficoInformativo():
+    return True
+

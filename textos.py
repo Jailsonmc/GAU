@@ -13,5 +13,18 @@ avaliacaoEDC = [ [ "Trabalho 1",10, 20171010, 15] , [ "Teste 1", 10, 20180115, 8
 docentesAvaliacao = [["Rui Neves","avaliacaoEDC"],["Daniel Silvestre","avaliacaoSD"],["Marcos Costa","avaliacaoBD"],
                      ["Patrícia Ramos","avaliacaoMat"],["Paulo Silveira","avaliacaoAP"]]
 
-opcoes = [["Digite 1 para pesquisar disciplinas"],["Digite 2 para registrar classificações obtidas"],
-          ["Digite 3 para verificar  seu estado de avaliação"],["Digite 4 para gráficos informativos"]]
+opcoes = ["Digite 1 para criar disciplina",
+          "Digite 2 para criar avaliação",
+          "Digite 3 para registar classificações obtidas",
+          "Digite 4 para verificar estado de avaliação",
+          "Digite 5 para gráficos informativos"]
+
+opcoes12 = [ "Digite 1 para criar disciplina ",
+            "Digite 2 para criar sistema de avaliação"]
+
+opcoes122 = [ "Digite 1 para listar disciplinas ",
+             "Digite 2 para criar avaliação"]
+
+opcoes22 = [ "Digite 1 para criar disciplina ",
+             "Digite 2 para criar sistema de avaliação"]
+
