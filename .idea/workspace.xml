@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="da75ac39-7bcb-435e-b01e-ffeef418fb6c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Avaliacao.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Curso.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Disciplina.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Docente.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Grafico.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/manipularDados.py" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/Main.py" />
-      <change beforePath="$PROJECT_DIR$/methods.py" afterPath="$PROJECT_DIR$/methods.py" />
-      <change beforePath="$PROJECT_DIR$/textos.py" afterPath="$PROJECT_DIR$/textos.py" />
-    </list>
+    <list default="true" id="da75ac39-7bcb-435e-b01e-ffeef418fb6c" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
