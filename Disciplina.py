@@ -1,6 +1,4 @@
 import sys
-import ManipularDados
-from decimal import Decimal
 
 class Disciplina:
     def __init__(self, nome, docente):
@@ -100,9 +98,6 @@ class Disciplina:
             #return "Não Definida"
 
         print(self.sistemaAvaliacao)
-        #for i in range(len(self.sistemaAvaliacao)):
-        #    listaNomes.append(self.sistemaAvaliacao[i].nome)
-        #return listaNomes
 
     def verificarEstadoAvaliacao(self):
         print("Curso: "+self.nome)

@@ -19,7 +19,7 @@ opcoes = ["Digite 1 para criar disciplina",
           "Digite 4 para verificar estado de avaliação",
           "Digite 5 para gráficos informativos(Vertical)",
           "Digite 6 para gráficos informativos(Horizontal)",
-          "Digite 7 para remover curso",
+          "Digite 7 para remover disciplina",
           "Digite 8 para remover avaliação"]
 
 opcoes12 = [ "Digite 1 para criar disciplina ",

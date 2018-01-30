@@ -1,3 +1,7 @@
+from tkinter import *
+import pickle
+from pathlib import Path
+import sys
 import Graficos
 import datetime
 import Textos
@@ -36,12 +40,21 @@ def afixarTabelaAvaliacaoComResultado(disciplina):
 
 
 avaliacoes = []
+#avaliacoes.append(Avaliacao.Avaliacao("Teste1","30","20170802","","n","AP"))
+#avaliacoes.append(Avaliacao.Avaliacao("Teste2","25","20170802","","n","AP"))
+#avaliacoes.append(Avaliacao.Avaliacao("Teste3","30","20170802","","n","AP"))
+#avaliacoes.append(Avaliacao.Avaliacao("Trabalho","10","20170802","","n","AP"))
+#avaliacoes.append(Avaliacao.Avaliacao("Prescença","10","","","p","AP"))
 avaliacoes = ManipularDados.abrir(pasta + avaliacoesArquivo)
 for i in range(len(avaliacoes)):
     print(avaliacoes[i])
 print("---")
 
 disciplinas = []
+#disciplinas.append(Disciplina.Disciplina("AP", "Maria"))
+#disciplinas.append(Disciplina.Disciplina("SD", "Guerreiro"))
+#disciplinas.append(Disciplina.Disciplina("Matemática", "Ana"))
+#manipularDados.salvar(disciplinas,pasta + disciplinasArquivo)
 disciplinas = ManipularDados.abrir(pasta + disciplinasArquivo)
 for i in range(len(disciplinas)):
     print(disciplinas[i])
@@ -50,9 +63,32 @@ for i in range(len(disciplinas)):
     for k in range(len(avaliacoes)):
         if avaliacoes[k].disciplina == disciplinas[i].nome:
             disciplinas[i].criarAvaliacao(avaliacoes[k])
+#for i in range(len(disciplinas)):
+#    print(disciplinas[i].sistemaAvaliacao.nome+"--")
 print("---")
 
 afixarTabelaAvaliacao(disciplinas[0].nome)
+
+#for i in range(len(avaliacoes)):
+    #disciplinas[0].criarAvaliacao(avaliacoes[i])
+#manipularDados.salvar(disciplinas[0], pasta + nomeF)
+
+#disciplinas[0].afixarTabelaAvaliacao()
+
+#print(disciplina)
+
+#grafico.plot( [10,5,3,4,6,8] )
+
+#grafico.title("Muito Fácil")
+#grafico.show()
+
+#root = Tk()
+#Grafico.Application(root)
+#root.mainloop()
+
+
+
+#pessoas = abrir(pasta + nomeF)
 
 textoPadrao = "Digite o valor correspondente"
 continuar = True
@@ -80,6 +116,17 @@ while continuar:
 
         listarDisciplinas()
 
+        #for i,j in enumerate(Textos.opcoes122):
+            #print(Textos.opcoes122[i])
+        #valor = int(input(textoPadrao))
+        #if valor == 1:
+            #print("Lista de disciplinas:")
+            #if len(disciplinas) == 0:
+                #print("Não há disciplinas")
+            #else:
+                #listarDisciplinas()
+                #valor = 2
+        #if valor == 2:
         nomeDisciplina = input("Digite o nome da disciplina")
         for i in range(len(disciplinas)):
             if nomeDisciplina == disciplinas[i].nome:
@@ -128,6 +175,12 @@ while continuar:
                     print("Erro ao gravar arquivo")
         afixarTabelaAvaliacao(disciplina)
 
+        #var = input("EE")
+
+        #for i,j in enumerate(Textos.opcoes22):
+        #    print(Textos.opcoes22[i])
+        #    valor = int(input(textoPadrao))
+
     #Caso queira verificar o estado de avaliação
     elif valor == 4:
         listarDisciplinas()
@@ -151,7 +204,10 @@ while continuar:
         listaNotasFinais = []
         listaNomesDisciplinas = []
         listarDisciplinas()
+        #listaN = [2, 15, 3, 9, 14]
         for i in range(len(disciplinas)):
+           #for j in range(len(disciplinas[i].sistemaAvaliacao)):
+                #print(disciplinas[i].sistemaAvaliacao[j])
             listaNotasFinais.append(disciplinas[i].retornarNotaFinal())
             listaNomesDisciplinas.append(disciplinas[i].nome)
 

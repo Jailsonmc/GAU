@@ -4,11 +4,11 @@
     <list default="true" id="da75ac39-7bcb-435e-b01e-ffeef418fb6c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Disciplina.py" afterPath="$PROJECT_DIR$/Disciplina.py" />
-      <change beforePath="$PROJECT_DIR$/Grafico.py" afterPath="$PROJECT_DIR$/Graficos.py" />
+      <change beforePath="$PROJECT_DIR$/Graficos.py" afterPath="$PROJECT_DIR$/Graficos.py" />
       <change beforePath="$PROJECT_DIR$/Main.py" afterPath="$PROJECT_DIR$/Main.py" />
+      <change beforePath="$PROJECT_DIR$/Textos.py" afterPath="$PROJECT_DIR$/Textos.py" />
       <change beforePath="$PROJECT_DIR$/dados/avaliacoes.pickles" afterPath="$PROJECT_DIR$/dados/avaliacoes.pickles" />
-      <change beforePath="$PROJECT_DIR$/manipularDados.py" afterPath="$PROJECT_DIR$/ManipularDados.py" />
-      <change beforePath="$PROJECT_DIR$/textos.py" afterPath="$PROJECT_DIR$/Textos.py" />
+      <change beforePath="$PROJECT_DIR$/dados/disciplinas.pickles" afterPath="$PROJECT_DIR$/dados/disciplinas.pickles" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,7 +20,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/GAU$Grafico.coverage" NAME="Grafico Coverage Results" MODIFIED="1517250748556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/GAU$AP17PL_PyF1_BToméGFranciscoHPregoCMeneses__update_data_restante_.coverage" NAME="AP17PL_PyF1_BToméGFranciscoHPregoCMeneses (update data restante) Coverage Results" MODIFIED="1517223867743" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/GAU$main.coverage" NAME="main Coverage Results" MODIFIED="1517322750831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/GAU$main.coverage" NAME="main Coverage Results" MODIFIED="1517326457223" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -39,10 +39,10 @@
       <file leaf-file-name="Main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="206" column="9" lean-forward="false" selection-start-line="206" selection-start-column="9" selection-end-line="206" selection-end-column="9" />
+            <state relative-caret-position="-236">
+              <caret line="134" column="41" lean-forward="false" selection-start-line="134" selection-start-column="8" selection-end-line="134" selection-end-column="41" />
               <folding>
-                <element signature="e#0#21#0" expanded="true" />
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -63,11 +63,9 @@
       <file leaf-file-name="Disciplina.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Disciplina.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="99" column="13" lean-forward="false" selection-start-line="99" selection-start-column="13" selection-end-line="99" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="274">
+              <caret line="54" column="58" lean-forward="false" selection-start-line="54" selection-start-column="54" selection-end-line="54" selection-end-column="58" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -75,8 +73,8 @@
       <file leaf-file-name="Graficos.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Graficos.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="96" column="5" lean-forward="false" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
+            <state relative-caret-position="465">
+              <caret line="31" column="32" lean-forward="false" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -89,6 +87,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
               <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Textos.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Textos.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="38" lean-forward="true" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -129,8 +137,8 @@
         <option value="$PROJECT_DIR$/methods.py" />
         <option value="$PROJECT_DIR$/Avaliacao.py" />
         <option value="$PROJECT_DIR$/textos.py" />
-        <option value="$PROJECT_DIR$/Textos.py" />
         <option value="$PROJECT_DIR$/Grafico.py" />
+        <option value="$PROJECT_DIR$/Textos.py" />
         <option value="$PROJECT_DIR$/Graficos.py" />
         <option value="$PROJECT_DIR$/Disciplina.py" />
         <option value="$PROJECT_DIR$/Main.py" />
@@ -334,7 +342,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -404,7 +412,7 @@
         <state relative-caret-position="255">
           <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -482,7 +490,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -558,22 +566,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Textos.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="57" lean-forward="false" selection-start-line="20" selection-start-column="57" selection-end-line="20" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Avaliacao.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ManipularDados.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -586,30 +578,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Graficos.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="96" column="5" lean-forward="false" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
+        <state relative-caret-position="465">
+          <caret line="31" column="32" lean-forward="false" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Avaliacao.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Textos.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="38" lean-forward="true" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Disciplina.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="99" column="13" lean-forward="false" selection-start-line="99" selection-start-column="13" selection-end-line="99" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="274">
+          <caret line="54" column="58" lean-forward="false" selection-start-line="54" selection-start-column="54" selection-end-line="54" selection-end-column="58" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="206" column="9" lean-forward="false" selection-start-line="206" selection-start-column="9" selection-end-line="206" selection-end-column="9" />
+        <state relative-caret-position="-236">
+          <caret line="134" column="41" lean-forward="false" selection-start-line="134" selection-start-column="8" selection-end-line="134" selection-end-column="41" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
