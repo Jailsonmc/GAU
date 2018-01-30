@@ -151,7 +151,7 @@ while continuar:
             if disciplina == disciplinas[i].nome:
                 listaNotas = disciplinas[i].retornarClassificacoes()
                 listaNomes = disciplinas[i].retornarNomesAvaliacoes()
-                Graficos.graficoVertical(listaNotas, listaNomes, disciplinas[i].nome)
+                Graficos.graficoVertical2(listaNotas, listaNomes, disciplinas[i].nome)
 
     #Caso queira gráficos informativos(Horizontal)
     elif valor == 6:
