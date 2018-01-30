@@ -37,9 +37,9 @@ def afixarTabelaAvaliacaoComResultado(disciplina):
 
 avaliacoes = []
 avaliacoes = ManipularDados.abrir(pasta + avaliacoesArquivo)
-for i in range(len(avaliacoes)):
-    print(str(avaliacoes[i]) + " - - " + str(avaliacoes[i].disciplina))
-print("---")
+#for i in range(len(avaliacoes)):
+#    print(str(avaliacoes[i]) + " - - " + str(avaliacoes[i].disciplina))
+#print("---")
 
 disciplinas = []
 disciplinas = ManipularDados.abrir(pasta + disciplinasArquivo)
@@ -210,7 +210,7 @@ while continuar:
         #    print(str(avaliacoes[i]) + " - " , end="")
         #print("")
         for i in range(len(avaliacoes)):
-            print(str(avaliacoes[i]) + " - (" + str(avaliacoes[i].disciplina)+")")
+            print(str(avaliacoes[i]) + " - (" + str(avaliacoes[i].disciplina)+")" + " Nota:" + str(avaliacoes[i].nota) + " Data:" + str(avaliacoes[i].data) + " Tipo:" + str(avaliacoes[i].tipo))
         print("---")
 
     else:

@@ -113,7 +113,7 @@ class Disciplina:
         print("Docente: "+self.docente)
         for i in range(len(self.sistemaAvaliacao)):
             sys.stdout.write(self.sistemaAvaliacao[i].nome + self.escreverLabelTabela(self.sistemaAvaliacao[i].nome,10) )
-        print("Final")
+        #print("Final")
         print("\n")
         for i in range(len(self.sistemaAvaliacao)):
             sys.stdout.write(self.sistemaAvaliacao[i].percentagem +"% "+ self.escreverLabelTabela(self.sistemaAvaliacao[i].percentagem,9) )
@@ -133,24 +133,38 @@ class Disciplina:
         for i in range(len(self.sistemaAvaliacao)):
             if self.sistemaAvaliacao[i].nota != "":
                 listaNotas.append(float(self.sistemaAvaliacao[i].nota))
-                listaNotasPercentagem.append(float(self.sistemaAvaliacao[i].nota))
+                listaNotasPercentagem.append(float(self.sistemaAvaliacao[i].percentagem))
             if self.sistemaAvaliacao[i].tipo == "p":
                 temPrescenca = True
                 percentagemPrecenca = self.sistemaAvaliacao[i].percentagem
-            if self.sistemaAvaliacao[i].nota != "":
+            if self.sistemaAvaliacao[i].nota == "" and self.sistemaAvaliacao[i].tipo != "p":
                 listaNotasVazias.append(self.sistemaAvaliacao[i].nota)
                 listaNotasVaziasPercentagem.append(self.sistemaAvaliacao[i].percentagem)
         somatioPercentagem = sum(listaNotasPercentagem)
         nota = 0
-        if temPrescenca and len(listaNotas) == (len(self.sistemaAvaliacao)) and somatioPercentagem < 100 and len(listaNotasVazias) == 1:
-            print("Entrou")
+
+        if temPrescenca and len(listaNotas) == (len(self.sistemaAvaliacao) - 2 ) and len(listaNotasVazias) == 1:
+
             for i in range(len(listaNotas)):
-                nota = float(nota) + float(listaNotas[i])*(float(listaNotasPercentagem)/100)
-            notaNecessaria = (20 - nota)/(float(listaNotasVaziasPercentagem[0])/100)
+                nota = float(nota) + float(listaNotas[i])*(float(listaNotasPercentagem[i])/100)
+                nota = float(nota) + float(20)*(float(percentagemPrecenca[i])/100)
+
+            notaNecessaria = (10 - float(nota))/float(str(listaNotasVaziasPercentagem[0]))
             notaNecessaria = round(notaNecessaria,2)
             print("Nota Necessária para passar: "+str(notaNecessaria))
+        elif temPrescenca and len(listaNotas) == (len(self.sistemaAvaliacao) - 1) and len(listaNotasVazias) == 0:
+            nota = 0
+            #print(listaNotas)
+            #print(listaNotasPercentagem)
+            #print(percentagemPrecenca)
+            for i in range(len(listaNotas)):
+                nota = float(nota) + float(listaNotas[i])*(float(listaNotasPercentagem[i])/100)
+                nota = float(nota) + float(20)*(float(percentagemPrecenca[0])/100)
+            print("Nota Final : " + str(round(nota,2)))
+            print("")
         else:
-            print("Há mais de 1 item faltando, no entando não pode ser calculado a nota para passar.")
+            print("Há mais de 1 item faltando, no entando não pode ser calculado a nota para passar.\n")
+            print("")
 
     def regitarClassificacao(self, nome, nota):
         try:
