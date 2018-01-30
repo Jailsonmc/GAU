@@ -51,6 +51,8 @@ class Disciplina:
 
         print("Avaliação contínua 1° ano/1° semestre - Curso: "+self.nome)
         print("Docente: "+self.docente)
+        listaNotas = []
+        resultado = 0
         for i in range(len(self.sistemaAvaliacao)):
             sys.stdout.write(self.sistemaAvaliacao[i].nome + self.escreverLabelTabela(self.sistemaAvaliacao[i].nome,10) )
         print("Final")
@@ -63,7 +65,14 @@ class Disciplina:
         print("\n")
         for i in range(len(self.sistemaAvaliacao)):
             sys.stdout.write(self.sistemaAvaliacao[i].nota + self.escreverLabelTabela(self.sistemaAvaliacao[i].nota,10) )
-
+            if self.sistemaAvaliacao[i].nota != "":
+                listaNotas.append(self.sistemaAvaliacao[i].nota)
+            print(listaNotas)
+            if len(listaNotas) == len(self.sistemaAvaliacao):
+                print("Entrou")
+                for i in range(len(self.sistemaAvaliacao)):
+                    resultado = resultado + self.sistemaAvaliacao[i].nota*(self.sistemaAvaliacao[i].percentagem/100)
+                print(resultado)
         print("\n")
 
 
@@ -87,7 +96,7 @@ class Disciplina:
                 listaNotas.append(self.sistemaAvaliacao[i].nota)
         if len(listaNotas) == len(self.sistemaAvaliacao):
             for k in range(len(self.sistemaAvaliacao)):
-                resultadoParcial = resultadoParcial + (self.sistemaAvaliacao[k].nota * (self.sistemaAvaliacao[k].percentatem/100))
+                resultadoParcial = resultadoParcial + (self.sistemaAvaliacao[k].nota * (self.sistemaAvaliacao[k].percentagem/100))
             if len(self.sistemaAvaliacao) == 0:
                 #return "Não Definida"
                 return 0
@@ -133,7 +142,8 @@ class Disciplina:
                 listaNotasVaziasPercentagem.append(self.sistemaAvaliacao[i].percentagem)
         somatioPercentagem = sum(listaNotasPercentagem)
         nota = 0
-        if temPrescenca and len(listaNotas)==(len(self.sistemaAvaliacao)-1) and somatioPercentagem < 100 and len(listaNotasVazias) == 1:
+        if temPrescenca and len(listaNotas) == (len(self.sistemaAvaliacao)) and somatioPercentagem < 100 and len(listaNotasVazias) == 1:
+            print("Entrou")
             for i in range(len(listaNotas)):
                 nota = float(nota) + float(listaNotas[i])*(float(listaNotasPercentagem)/100)
             notaNecessaria = (20 - nota)/(float(listaNotasVaziasPercentagem[0])/100)

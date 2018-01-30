@@ -199,6 +199,17 @@ while continuar:
                         except ValueError:
                             print("Erro ao remover avaliação")
 
+    elif valor == 9 :
+
+        print("Disciplinas: ")
+        for i in range(len(disciplinas)):
+            print(str(disciplinas[i]) + " - ", end="")
+        print("")
+        print("Avaliações: ")
+        for i in range(len(avaliacoes)):
+            print(str(avaliacoes[i]) + " - " , end="")
+        print("")
+
     else:
         continuar = False
 
