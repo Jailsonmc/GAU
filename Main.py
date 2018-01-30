@@ -114,7 +114,14 @@ while continuar:
                 print(disciplinas[i])
                 for k in range(len(disciplinas[i].sistemaAvaliacao)):
                     if avaliacao == disciplinas[i].sistemaAvaliacao[k].nome:
-                        nota = input("Digite a classificação:")
+                        verificar = True
+                        while verificar == True:
+                            try:
+                                nota = float(input("Digite a classificação:"))
+                                verificar = False
+                            except ValueError:
+                                print("Valor não é um número")
+
                         for j in range(len(avaliacoes)):
                             if avaliacoes[j].disciplina == disciplina and avaliacoes[j].nome == avaliacao:
                                 if float(nota) > 20 or float(nota) < 0:
@@ -126,7 +133,7 @@ while continuar:
                     print("Avaliação criada com sucesso.")
                 except ValueError:
                     print("Erro ao gravar arquivo")
-        afixarTabelaAvaliacao(disciplina)
+        afixarTabelaAvaliacaoComResultado(disciplina)
 
     #Caso queira verificar o estado de avaliação
     elif valor == 4:
