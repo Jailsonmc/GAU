@@ -4,6 +4,7 @@ import Textos
 import Disciplina
 import Avaliacao
 import ManipularDados
+import Curso
 
 pasta = "/Users/jailsoncavalcanti/Doc/Projects/Python/GAU/dados/"
 nomeF = 'dados.pickles'
@@ -34,6 +35,7 @@ def afixarTabelaAvaliacaoComResultado(disciplina):
         if disciplina == disciplinas[i].nome:
             disciplinas[i].verificarEstadoAvaliacao()
 
+curso = Curso.Curso("Engenharia Informática")
 
 avaliacoes = []
 avaliacoes = ManipularDados.abrir(pasta + avaliacoesArquivo)
@@ -46,6 +48,8 @@ disciplinas = ManipularDados.abrir(pasta + disciplinasArquivo)
 #for i in range(len(disciplinas)):
 #    print(disciplinas[i])
 
+curso.disciplinas = disciplinas
+
 for i in range(len(disciplinas)):
     for k in range(len(avaliacoes)):
         if avaliacoes[k].disciplina == disciplinas[i].nome:
@@ -56,13 +60,19 @@ for i in range(len(disciplinas)):
 
 textoPadrao = "Digite o valor correspondente"
 continuar = True
-print("Bem-vindo Aluno")
+print("Bem-vindo")
+print("AVALIAÇÃO CONTÍNUA 1.º ANO/1.º SEM - " + curso.nome)
 while continuar:
 
     for i,j in enumerate(Textos.opcoes):
         print(Textos.opcoes[i])
 
-    valor = int(input(textoPadrao))
+    valor = input(textoPadrao)
+
+    try:
+        valor = int(valor)
+    except ValueError:
+        break
 
     #Caso queira criar disciplina ou avaliação
     if valor == 1:

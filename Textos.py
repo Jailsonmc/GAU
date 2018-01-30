@@ -21,7 +21,8 @@ opcoes = ["Digite 1 para criar disciplina",
           "Digite 6 para gráficos informativos(Horizontal)",
           "Digite 7 para remover disciplina",
           "Digite 8 para remover avaliação",
-          "Digite 9 para lista todo conteúdo gravado"]
+          "Digite 9 para lista todo conteúdo gravado",
+          "Digite qualquer outro valor para sair"]
 
 opcoes12 = [ "Digite 1 para criar disciplina ",
             "Digite 2 para criar sistema de avaliação"]
