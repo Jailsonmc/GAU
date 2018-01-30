@@ -90,18 +90,23 @@ class Disciplina:
 
     def retornarNotaFinal(self):
         listaNotas = []
+        listaPercentagem = []
         resultadoParcial = 0
+        percentagemPrescenca = 0
+        notaFinal = 0
         for i in range(len(self.sistemaAvaliacao)):
             if self.sistemaAvaliacao[i].nota != "":
                 listaNotas.append(self.sistemaAvaliacao[i].nota)
-        if len(listaNotas) == len(self.sistemaAvaliacao):
-            for k in range(len(self.sistemaAvaliacao)):
-                resultadoParcial = resultadoParcial + (self.sistemaAvaliacao[k].nota * (self.sistemaAvaliacao[k].percentagem/100))
-            if len(self.sistemaAvaliacao) == 0:
-                #return "Não Definida"
-                return 0
-            else:
-                return resultadoParcial/len(self.sistemaAvaliacao)
+                listaPercentagem.append(self.sistemaAvaliacao[i].percentagem)
+            if self.sistemaAvaliacao[i].tipo == "p":
+                percentagemPrescenca = self.sistemaAvaliacao[i].percentagem
+
+        if len(self.sistemaAvaliacao) - 1 == len(listaNotas):
+
+            for i in range(len(listaNotas)):
+                notaFinal = float(notaFinal) + float(listaNotas[i])*(float(listaPercentagem[i])/100)
+
+            return notaFinal
         else:
             return 0
             #return "Não Definida"
