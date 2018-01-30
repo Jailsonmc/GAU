@@ -2,31 +2,8 @@ from tkinter import *
 import matplotlib.pyplot as grafico
 import numpy as np
 
-#MOSTRA O GRÁFICO DE BARRAS VERTICAIS COM AS AVALIAÇÕES DA CADEIRA
+
 def graficoVertical(listaNotas, listaNomes, disciplina):
-
-    def autoLabel(rects):
-        for n in rects:
-            height = n.get_height()
-            ax.text(n.get_x() + n.get_width() / 2., 1.05 * height, '%d' % int(height), ha='center', va='bottom')
-
-    indices = np.arange(len(listaNotas))
-    width = 0.8
-
-    fig, ax = grafico.subplots()
-    notas = ax.bar(indices, listaNotas, width, color='b')
-
-    ax.set_ylabel("Cotação")
-    ax.set_title("Notas da disciplina: " + disciplina)
-    ax.set_xticks(indices + width)
-    ax.set_xticklabels(listaNomes)
-    ax.legend((notas), ('Notas'))
-
-    autoLabel(notas)
-
-    grafico.show()
-
-def graficoVertical2(listaNotas, listaNomes, disciplina):
     # Variáveis para o Bar Chart
     y_axis = [20,50,30]
 
