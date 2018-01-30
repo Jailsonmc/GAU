@@ -1,5 +1,6 @@
 import sys
-import manipularDados
+import ManipularDados
+from decimal import Decimal
 
 class Disciplina:
     def __init__(self, nome, docente):
@@ -68,12 +69,83 @@ class Disciplina:
         print("\n")
 
 
+    def retornarClassificacoes(self):
+        listaNotas = []
+        for i in range(len(self.sistemaAvaliacao)):
+            listaNotas.append(self.sistemaAvaliacao[i].nota)
+        return listaNotas
+
+    def retornarNomesAvaliacoes(self):
+        listaNomes = []
+        for i in range(len(self.sistemaAvaliacao)):
+            listaNomes.append(self.sistemaAvaliacao[i].nome)
+        return listaNomes
+
+    def retornarNotaFinal(self):
+        listaNotas = []
+        resultadoParcial = 0
+        for i in range(len(self.sistemaAvaliacao)):
+            if self.sistemaAvaliacao[i].nota != "":
+                listaNotas.append(self.sistemaAvaliacao[i].nota)
+        if len(listaNotas) == len(self.sistemaAvaliacao):
+            for k in range(len(self.sistemaAvaliacao)):
+                resultadoParcial = resultadoParcial + (self.sistemaAvaliacao[k].nota * (self.sistemaAvaliacao[k].percentatem/100))
+            if len(self.sistemaAvaliacao) == 0:
+                #return "Não Definida"
+                return 0
+            else:
+                return resultadoParcial/len(self.sistemaAvaliacao)
+        else:
+            return 0
+            #return "Não Definida"
+
+        print(self.sistemaAvaliacao)
+        #for i in range(len(self.sistemaAvaliacao)):
+        #    listaNomes.append(self.sistemaAvaliacao[i].nome)
+        #return listaNomes
 
     def verificarEstadoAvaliacao(self):
-        try:
-            pass
-        except ValueError:
-            return -2
+        print("Curso: "+self.nome)
+        print("Docente: "+self.docente)
+        for i in range(len(self.sistemaAvaliacao)):
+            sys.stdout.write(self.sistemaAvaliacao[i].nome + self.escreverLabelTabela(self.sistemaAvaliacao[i].nome,10) )
+        print("Final")
+        print("\n")
+        for i in range(len(self.sistemaAvaliacao)):
+            sys.stdout.write(self.sistemaAvaliacao[i].percentagem +"% "+ self.escreverLabelTabela(self.sistemaAvaliacao[i].percentagem,9) )
+        print("\n")
+        for i in range(len(self.sistemaAvaliacao)):
+            sys.stdout.write(self.sistemaAvaliacao[i].data + self.escreverLabelTabela(self.sistemaAvaliacao[i].data,10) )
+        print("\n")
+        for i in range(len(self.sistemaAvaliacao)):
+            sys.stdout.write(self.sistemaAvaliacao[i].nota + self.escreverLabelTabela(self.sistemaAvaliacao[i].nota,10) )
+
+        print("\n")
+        listaNotas = []
+        listaNotasPercentagem = []
+        temPrescenca = False
+        listaNotasVazias = []
+        listaNotasVaziasPercentagem = []
+        for i in range(len(self.sistemaAvaliacao)):
+            if self.sistemaAvaliacao[i].nota != "":
+                listaNotas.append(float(self.sistemaAvaliacao[i].nota))
+                listaNotasPercentagem.append(float(self.sistemaAvaliacao[i].nota))
+            if self.sistemaAvaliacao[i].tipo == "p":
+                temPrescenca = True
+                percentagemPrecenca = self.sistemaAvaliacao[i].percentagem
+            if self.sistemaAvaliacao[i].nota != "":
+                listaNotasVazias.append(self.sistemaAvaliacao[i].nota)
+                listaNotasVaziasPercentagem.append(self.sistemaAvaliacao[i].percentagem)
+        somatioPercentagem = sum(listaNotasPercentagem)
+        nota = 0
+        if temPrescenca and len(listaNotas)==(len(self.sistemaAvaliacao)-1) and somatioPercentagem < 100 and len(listaNotasVazias) == 1:
+            for i in range(len(listaNotas)):
+                nota = float(nota) + float(listaNotas[i])*(float(listaNotasPercentagem)/100)
+            notaNecessaria = (20 - nota)/(float(listaNotasVaziasPercentagem[0])/100)
+            notaNecessaria = round(notaNecessaria,2)
+            print("Nota Necessária para passar: "+str(notaNecessaria))
+        else:
+            print("Há mais de 1 item faltando, no entando não pode ser calculado a nota para passar.")
 
     def regitarClassificacao(self, nome, nota):
         try:

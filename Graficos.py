@@ -63,42 +63,52 @@ class Application:
             self.mensagem["text"] = "Erro na autenticação"
 
 
-    #MOSTRA O GRÁFICO DE BARRAS VERTICAIS COM AS AVALIAÇÕES DA CADEIRA
-    def criarGraficoVertical(a):
-        def autoLabel(rects):
-            for n in rects:
-                height = n.get_height()
-                ax.text(n.get_x() + n.get_width() / 2., 1.05 * height, '%d' % int(height), ha='center', va='bottom')
+#MOSTRA O GRÁFICO DE BARRAS VERTICAIS COM AS AVALIAÇÕES DA CADEIRA
+def graficoVertical(listaNotas, listaNomes, disciplina):
 
-        ind = np.arange(len(a[0]))
-        width = 0.7
+    def autoLabel(rects):
+        for n in rects:
+            height = n.get_height()
+            ax.text(n.get_x() + n.get_width() / 2., 1.05 * height, '%d' % int(height), ha='center', va='bottom')
 
-        fig, ax = grafico.subplots()
-        notas = ax.bar(ind, a[3], width, color='b')
+    indices = np.arange(len(listaNotas))
+    width = 0.8
 
-        ax.set_ylabel('Cotação')
-        ax.set_title('Nota das avaliações')
-        ax.set_xticks(ind + width)
-        ax.set_xticklabels(a[0])
-        ax.legend((notas), ('Notas'))
+    fig, ax = grafico.subplots()
+    notas = ax.bar(indices, listaNotas, width, color='b')
 
-        autoLabel(notas)
+    ax.set_ylabel("Cotação")
+    ax.set_title("Notas da disciplina: " + disciplina)
+    ax.set_xticks(indices + width)
+    ax.set_xticklabels(listaNomes)
+    ax.legend((notas), ('Notas'))
 
-        grafico.show()
+    autoLabel(notas)
 
-    #MOSTRA O GRÁFICO DE BARRAS HORIZONTAIS COM AS NOTAS FINAIS DE TODAS AS CADEIRAS DO SEMESTRE
-    def criarGraficoHorizontal(dis, a, b, c, d, e):
-        grafico.rcdefaults()
-        fig, ax = grafico.subplots()
+    grafico.show()
 
-        y_pos = np.arange(len(dis))
-        notas = (a[3][len(a[3]) - 1], b[3][len(b[3]) - 1], c[3][len(c[3]) - 1], d[3][len(d[3]) - 1], e[3][len(e[3]) - 1])
+#MOSTRA O GRÁFICO DE BARRAS HORIZONTAIS COM AS NOTAS FINAIS DE TODAS AS CADEIRAS DO SEMESTRE
+def graficoHorizontal(disciplinas, listaNotasFinais):
+    grafico.rcdefaults()
+    fig, ax = grafico.subplots()
 
-        ax.barh(y_pos, notas, align='center', color='b')
-        ax.set_yticks(y_pos)
-        ax.set_yticklabels(dis)
-        ax.invert_yaxis()
-        ax.set_xlabel('Cotação')
-        ax.set_title('Avaliação geral do semestre')
+    #listaNotasFinais = str(listaNotasFinais)
+    #for i in range(len(listaNotasFinais)):
+    #    if
 
-        grafico.show()
+    y_pos = np.arange(len(disciplinas))
+    #for i in range(listaNotasFinais):
+    #    notas = listaNotasFinais[i][len(listaNotasFinais[i] - 1)]
+    #notas = ( listaNotasFinais[0][len(listaNotasFinais[0]) - 1], listaNotasFinais[1][len(listaNotasFinais[1]) - 1], listaNotasFinais[2][len(listaNotasFinais[2]) - 1], listaNotasFinais[3][len(listaNotasFinais[3]) - 1], listaNotasFinais[4][len(listaNotasFinais[4]) - 1] )
+    #notas = ( a[3][len(a[3]) - 1], b[3][len(b[3]) - 1], c[3][len(c[3]) - 1], d[3][len(d[3]) - 1], e[3][len(e[3]) - 1] )
+
+    #print(notas)
+    #f = input("Parou!")
+    ax.barh(y_pos, listaNotasFinais, align='center', color='b')
+    ax.set_yticks(y_pos)
+    ax.set_yticklabels(disciplinas)
+    ax.invert_yaxis()
+    ax.set_xlabel('Cotação')
+    ax.set_title('Avaliação geral do semestre')
+
+    grafico.show()
