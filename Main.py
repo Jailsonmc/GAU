@@ -217,7 +217,7 @@ while continuar:
         #    print(str(avaliacoes[i]) + " - " , end="")
         #print("")
         for i in range(len(avaliacoes)):
-            print(str(avaliacoes[i]) + " - (" + str(avaliacoes[i].disciplina)+")" + " Nota:" + str(avaliacoes[i].nota) + " Data:" + str(avaliacoes[i].data) + " Tipo:" + str(avaliacoes[i].tipo))
+            print(str(avaliacoes[i]) + " "* (15 - len(avaliacoes[i].nome)) + " - (" + str(avaliacoes[i].disciplina)+")" + " "* (15 - len(avaliacoes[i].disciplina))+ " Nota:" + str(avaliacoes[i].nota) + " "* (15 - len(str(avaliacoes[i].nota))) + " Data:" + str(avaliacoes[i].data) + " "* (15 - len(avaliacoes[i].data))   + " Tipo:" + str(avaliacoes[i].tipo))
         print("---")
 
     else:
