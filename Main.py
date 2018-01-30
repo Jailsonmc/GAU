@@ -37,22 +37,22 @@ def afixarTabelaAvaliacaoComResultado(disciplina):
 
 avaliacoes = []
 avaliacoes = ManipularDados.abrir(pasta + avaliacoesArquivo)
-for i in range(len(avaliacoes)):
-    print(avaliacoes[i])
-print("---")
+#for i in range(len(avaliacoes)):
+    #print(avaliacoes[i])
+#print("---")
 
 disciplinas = []
 disciplinas = ManipularDados.abrir(pasta + disciplinasArquivo)
-for i in range(len(disciplinas)):
-    print(disciplinas[i])
+#for i in range(len(disciplinas)):
+#    print(disciplinas[i])
 
 for i in range(len(disciplinas)):
     for k in range(len(avaliacoes)):
         if avaliacoes[k].disciplina == disciplinas[i].nome:
             disciplinas[i].criarAvaliacao(avaliacoes[k])
-print("---")
+#print("---")
 
-afixarTabelaAvaliacao(disciplinas[0].nome)
+#afixarTabelaAvaliacao(disciplinas[0].nome)
 
 textoPadrao = "Digite o valor correspondente"
 continuar = True
@@ -161,11 +161,18 @@ while continuar:
     elif valor == 7:
         listarDisciplinas()
         disciplina = input("Digite a disciplina")
+        listaIndice = []
         for i in range(len(disciplinas)):
             if disciplina == disciplinas[i].nome:
                 for k in range(len(avaliacoes)):
+                    print(str(len(avaliacoes)) + "~~" + avaliacoes[k].disciplina+"--")
                     if avaliacoes[k].disciplina == disciplina:
-                        avaliacoes.pop(k)
+                        listaIndice.append(k)
+                for k in range(len(avaliacoes)):
+                    print(avaliacoes[k])
+                #for k in range(len(listaIndice)):
+                #    print(listaIndice[k])
+                #    avaliacoes.pop(listaIndice[k])
                 try:
                     ManipularDados.salvar(avaliacoes, pasta + avaliacoesArquivo)
                     disciplinas.pop(i)

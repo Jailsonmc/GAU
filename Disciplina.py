@@ -49,7 +49,7 @@ class Disciplina:
 
     def afixarTabelaAvaliacao(self):
 
-        print("Curso: "+self.nome)
+        print("Avaliação contínua 1° ano/1° semestre - Curso: "+self.nome)
         print("Docente: "+self.docente)
         for i in range(len(self.sistemaAvaliacao)):
             sys.stdout.write(self.sistemaAvaliacao[i].nome + self.escreverLabelTabela(self.sistemaAvaliacao[i].nome,10) )
